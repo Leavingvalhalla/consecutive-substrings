@@ -1,5 +1,16 @@
 def consecutive_substrings(string)
-  # type your code in here
+  ans = []
+  i = 0
+  x = 1
+  string.length.times do
+    string[i..-1].length.times do
+      ans.push(string.slice(i, x))
+      x += 1
+    end
+    x = 1
+    i += 1
+  end
+  ans
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -17,4 +28,10 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+  
+  
+
+
+
+
 # And a written explanation of your solution
